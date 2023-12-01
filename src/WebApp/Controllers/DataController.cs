@@ -9,6 +9,6 @@ public class DataController : ControllerBase
     [HttpGet]
     public IActionResult Get()
     {
-        return Ok(new { source = "WebApp", data = "WebApp .net8 Data" });
+        return Ok(new { source = "WebApp", data = "WebApp .NET 8 Data" });
     }
 }

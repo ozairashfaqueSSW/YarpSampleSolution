@@ -10,7 +10,7 @@ namespace WebApp.Legacy.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(new DataModel { Source = "WebApp.Legacy", Data = "Legacy App Data" });
+            return Ok(new DataModel { Source = "LegacyWebApp", Data = "Legacy WebApp .NET Core 3.1" });
         }
     }
 }
