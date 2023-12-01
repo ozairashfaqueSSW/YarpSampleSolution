@@ -4,7 +4,7 @@
 
 ## Prerequisites
 &nbsp;
-### 1. Clone the repo at [YARP.Sample.Solution](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution). or use the following git command
+### 1. Clone the repo at [YarpSampleSolution](https://github.com/ozairashfaqueSSW/YarpSampleSolution). or use the following git command
  ```bash
   git clone https://github.com/ozairashfaqueSSW/YARP.Sample.Solution.git
   ```
