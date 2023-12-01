@@ -45,3 +45,18 @@ Example:
 - **Recommended Version:** 8.0.100
 - **Download:** [Download .NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
 - **Usage:** Used to build and run .NET 8 Project [WebApp](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/tree/master/src/WebApp) and [Yarp.Gateway](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/tree/master/src/Yarp.Gateway).
+
+## The F5 Experience:
+### Angular Serve:
+1. Open the directory **AngularUI** in terminal or command prompt.
+2. Execute npm run serve or ng serve
+   ![image](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/assets/96504411/051c5867-1bcc-4b5d-ac01-38fc660a7945)
+3. Ignore the above address.
+4. 
+### .Net:
+1. Open the solution properties
+2. Check the "Multiple startup projects" option
+3. Set WebApp.Legacy (.NET core 3.1), WebApp (.NET 8), and Yarp.Gateway (.NET 8) Action option to Start.
+   ![image](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/assets/96504411/1b0c3be6-e62d-41c7-b881-4742f288bb7b)
+
+
