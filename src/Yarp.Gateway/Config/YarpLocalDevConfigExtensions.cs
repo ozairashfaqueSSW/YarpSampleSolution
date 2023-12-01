@@ -82,8 +82,6 @@ public static class YarpLocalDevConfigExtensions
             }
         };
 
-        Console.WriteLine("webAppAddress", webAppAddress);
-        Console.WriteLine("webClusters", webClusters);
         switch (config.AngularServeModeEnum)
         {
             case ServeMode.Artifact:
