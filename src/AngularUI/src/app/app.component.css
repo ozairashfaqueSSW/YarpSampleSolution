@@ -1,0 +1,8 @@
+.image-container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.image {
+  object-fit: cover;
+}

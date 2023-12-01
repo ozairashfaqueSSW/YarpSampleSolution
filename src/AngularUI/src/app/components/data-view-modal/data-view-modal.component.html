@@ -1,0 +1,20 @@
+<div class="modal">
+  <button class="close-btn" (click)="closeModal()">Close</button>
+  <h2>{{ dataModel.source | titlecase }}</h2>
+  <hr>
+  <table>
+    <tr>
+      <td><strong>API Endpoint:</strong></td>
+      <td>{{ selectedEndpoint }}</td>
+    </tr>
+    <tr>
+      <td><strong>Data:</strong></td>
+      <td>{{ dataModel.data }}</td>
+    </tr>
+    <tr>
+      <td><strong>Full Path:</strong></td>
+      <td>{{ fullPath }}</td>
+    </tr>
+  </table>
+</div>
+<div class="modal-background" (click)="closeModal()"></div>
