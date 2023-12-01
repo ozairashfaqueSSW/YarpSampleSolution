@@ -38,10 +38,10 @@ Example:
 
 - **Recommended Version:** 3.1 or higher
 - **Download:** [Download .NET Core](https://dotnet.microsoft.com/en-us/download/dotnet)
-- **Usage:** Used to build and run .NET Core Back End API  ([WebApp.Legacy](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/tree/master/src/WebApp.Legacy)).
+- **Usage:** Used to build and run .NET Core Back End API  [WebApp.Legacy](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/tree/master/src/WebApp.Legacy).
 
 #### .NET 8.0 SDK
 
 - **Recommended Version:** 8.0.100
 - **Download:** [Download .NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
-- **Usage:** Used to build and run .NET 8 Project ([WebApp](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/tree/master/src/WebApp) and [Yarp.Gateway](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/tree/master/src/Yarp.Gateway)).
+- **Usage:** Used to build and run .NET 8 Project [WebApp](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/tree/master/src/WebApp) and [Yarp.Gateway](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/tree/master/src/Yarp.Gateway).
