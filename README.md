@@ -32,7 +32,7 @@ To check what SDK's are currently installed you can run `dotnet --list-sdks`.
 Example:
 
 ```bash
-   C:\Users\tomek>dotnet --list-sdks
+   C:\>dotnet --list-sdks
 
    3.1.101 [C:\Program Files\dotnet\sdk]
    8.0.100 [C:\Program Files\dotnet\sdk]
