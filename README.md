@@ -1,4 +1,7 @@
 # Welcome to YARP.Sample.Solution
+## Architectural Diagram
+![image](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/assets/96504411/c5fa6870-dbd9-4c9a-b349-4895bd4a09e7)
+
 ## Prerequisites
 &nbsp;
 ### 1. Clone the repo at [YARP.Sample.Solution](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution). or use the following git command
