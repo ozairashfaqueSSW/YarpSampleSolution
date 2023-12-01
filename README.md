@@ -52,7 +52,7 @@ Example:
 2. Execute npm run serve or ng serve
    ![image](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/assets/96504411/051c5867-1bcc-4b5d-ac01-38fc660a7945)
 3. Ignore the above address.
-4. 
+   
 ### .Net:
 1. Open the solution properties
 2. Check the "Multiple startup projects" option
