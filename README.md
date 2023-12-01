@@ -6,7 +6,7 @@
 &nbsp;
 ### 1. Clone the repo at [YarpSampleSolution](https://github.com/ozairashfaqueSSW/YarpSampleSolution). or use the following git command
  ```bash
-  git clone https://github.com/ozairashfaqueSSW/YARP.Sample.Solution.git
+  git clone https://github.com/ozairashfaqueSSW/YarpSampleSolution.git
   ```
 ### 2. Node.js (https://nodejs.org)
 **RECOMMENDED VERSION:** [20.10.0](https://nodejs.org/en/download) - While previous versions may not work 
