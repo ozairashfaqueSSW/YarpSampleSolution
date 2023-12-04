@@ -1,4 +1,4 @@
-# Welcome to YarpSampleSolution
+# Welcome to Yarp Sample Solution
 ## Architectural Diagram
 ![image](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/assets/96504411/c5fa6870-dbd9-4c9a-b349-4895bd4a09e7)
 
