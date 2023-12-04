@@ -1,12 +1,12 @@
 # Welcome to YarpSampleSolution
 ## Architectural Diagram
-![image](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/assets/96504411/c5fa6870-dbd9-4c9a-b349-4895bd4a09e7)
+![image](./src/AngularUI/src/assets/yarp-migration-architectural-diagram.png)
 
 ## Prerequisites
 &nbsp;
 ### 1. Clone the repo at [YarpSampleSolution](https://github.com/ozairashfaqueSSW/YarpSampleSolution). or use the following git command
  ```bash
-  git clone https://github.com/ozairashfaqueSSW/YARP.Sample.Solution.git
+  git clone https://github.com/ozairashfaqueSSW/YARPSampleSolution.git
   ```
 ### 2. Node.js (https://nodejs.org)
 **RECOMMENDED VERSION:** [20.10.0](https://nodejs.org/en/download) - While previous versions may not work 
@@ -47,7 +47,7 @@ Example:
 
 - **Recommended Version:** 8.0.100
 - **Download:** [Download .NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
-- **Usage:** Used to build and run .NET 8 Project [WebApp](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/tree/master/src/WebApp) and [Yarp.Gateway](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/tree/master/src/Yarp.Gateway).
+- **Usage:** Used to build and run .NET 8 Project [Yarp.Gateway](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/tree/master/src/Yarp.Gateway).
 
 ## The F5 Experience:
 ### Angular Serve:
@@ -59,7 +59,6 @@ Example:
 ### .Net:
 1. Open the solution properties
 2. Check the "Multiple startup projects" option
-3. Set WebApp.Legacy (.NET core 3.1), WebApp (.NET 8), and Yarp.Gateway (.NET 8) Action option to Start.
-   ![image](https://github.com/ozairashfaqueSSW/YARP.Sample.Solution/assets/96504411/1b0c3be6-e62d-41c7-b881-4742f288bb7b)
-
+3. Set WebApp.Legacy (.NET core 3.1), and Yarp.Gateway (.NET 8) Action option to Start.
+   ![image](./src/AngularUI/src/assets/project-stratup-instructions.png)
 
