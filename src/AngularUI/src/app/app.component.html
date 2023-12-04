@@ -239,7 +239,8 @@
 
         <div *ngIf="data">
           <app-data-view-modal
-            [dataModel]="data"
+            [modalTitle]="this.data.source"
+            [modalData]="this.data.data"
             [selectedEndpoint]="selectedEndpoint"
             [fullPath]="fullPath"
             *ngIf="showModal"
@@ -250,7 +251,7 @@
 
 
         <div class="image-container">
-          <img src="../assets/yarp-architectural-diagram.png" class="image" alt="Architectural diagram">
+          <img src="../assets/yarp-migration-architectural-diagram.png" class="image" alt="Architectural diagram">
         </div>
 
 

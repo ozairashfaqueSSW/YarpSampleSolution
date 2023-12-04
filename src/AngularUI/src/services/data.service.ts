@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Inject, Injectable, InjectionToken } from "@angular/core";
 import { Observable } from "rxjs";
-import { DataModel } from "../app/models/DataModel";
+import { DataModel } from "../app/models/DataModels";
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,6 @@ export class DataService {
   }
 
   getData(endpoint: string): Observable<any> {
-    return this.http.get<DataModel>(`${this.baseUrl}/${endpoint}`);
+    return this.http.get<DataModel >(`${this.baseUrl}/${endpoint}`);
   }
 }

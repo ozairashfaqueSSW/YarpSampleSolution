@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
-import { DataModel } from '../../models/DataModel';
 
 @Component({
   selector: 'app-data-view-modal',
@@ -8,7 +7,8 @@ import { DataModel } from '../../models/DataModel';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DataViewModalComponent {
-  @Input() dataModel: DataModel = {source:"", data:""};
+   @Input() modalTitle : string = "";
+   @Input() modalData : string = "";
   @Input() selectedEndpoint: string = "";
   @Input() fullPath: string = "";
   @Output() closeModalEvent = new EventEmitter<void>();

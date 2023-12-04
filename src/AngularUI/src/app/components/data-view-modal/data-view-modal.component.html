@@ -1,6 +1,6 @@
 <div class="modal">
   <button class="close-btn" (click)="closeModal()">Close</button>
-  <h2>{{ dataModel.source }}</h2>
+  <h2>{{modalTitle}}</h2>
   <hr>
   <table>
     <tr>
@@ -9,7 +9,7 @@
     </tr>
     <tr>
       <td><strong>Data:</strong></td>
-      <td>{{ dataModel.data }}</td>
+      <td>{{modalData}}</td>
     </tr>
     <tr>
       <td><strong>Full Path:</strong></td>
