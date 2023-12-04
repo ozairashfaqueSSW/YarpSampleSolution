@@ -8,7 +8,7 @@ public static class YarpLocalDevConfigExtensions
 {
     private const string webAppLegacyClusterId = "webAppLegacy";
 
-    private const string webAppClusterId = "webApp";
+    private const string webAppLegacyApiClusterId = "webAppLegacyApi";
 
     private const string angularClusterId = "angularServePath";
 
@@ -35,14 +35,25 @@ public static class YarpLocalDevConfigExtensions
 
         var webRoutes = new List<RouteConfig>
         {
-                // Route for Legacy WebApp
+                // Route for Legacy WebApp Information
                 new()
                 {
                     RouteId = "webAppLegacyServePath",
                     ClusterId = webAppLegacyClusterId,
                     Match = new RouteMatch
                     {
-                        Path = "/legacyWebapp/{**catch-all}",
+                        Path = "/legacywebapp/{**catch-all}",
+                    },
+                },
+
+                // Route for Legacy WebApp
+                new()
+                {
+                    RouteId = "webAppLegacyApiServePath",
+                    ClusterId = webAppLegacyApiClusterId,
+                    Match = new RouteMatch
+                    {
+                        Path = "/api/{**catch-all}",
                     },
                 },
         };
@@ -55,6 +66,15 @@ public static class YarpLocalDevConfigExtensions
                 Destinations = new Dictionary<string, DestinationConfig>
                 {
                     {"webAppLegacyServePath", new DestinationConfig{ Address = webAppLegacyAddress } }
+                }
+            },
+
+            new()
+            {
+                ClusterId = webAppLegacyApiClusterId,
+                Destinations = new Dictionary<string, DestinationConfig>
+                {
+                    {"webAppLegacyApiServePath", new DestinationConfig{ Address = webAppLegacyAddress } }
                 }
             },
         };
