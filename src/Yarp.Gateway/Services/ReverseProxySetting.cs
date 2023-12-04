@@ -19,8 +19,6 @@ public class ReverseProxySetting
 
     public string WebAppLegacyServeAddress { get; set; } = string.Empty;
 
-    public string WebAppServeAddress { get; set; } = string.Empty;
-
     public string AngularServeAddress { get; set; } = string.Empty;
 
     public string AngularServeMode { get; set; } = string.Empty;

@@ -12,7 +12,7 @@ export class AppComponent {
 
   public data: DataModel = { source: '', data: '' };
 
-  public endpoints: string[] = ['legacyWebapp', 'webapp'];
+  public endpoints: string[] = ['legacyWebapp'];
 
   public selectedEndpoint: string = "";
 

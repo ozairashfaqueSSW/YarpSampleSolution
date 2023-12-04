@@ -27,9 +27,6 @@ public static class YarpLocalDevConfigExtensions
     {
         ReverseProxySetting? config = configuration.GetSection(ReverseProxySetting.Key).Get<ReverseProxySetting>();
 
-        string webAppAddress = config?.WebAppServeAddress ?? throw new ArgumentNullException(nameof(ReverseProxySetting.WebAppServeAddress),
-            $@"Missing config {ReverseProxySetting.Key} for WebApp");
-
         string webAppLegacyAddress = config?.WebAppLegacyServeAddress ?? throw new ArgumentNullException(nameof(ReverseProxySetting.WebAppLegacyServeAddress),
             $@"Missing config {ReverseProxySetting.Key} for WebAppLegacy");
 
@@ -48,17 +45,6 @@ public static class YarpLocalDevConfigExtensions
                         Path = "/legacyWebapp/{**catch-all}",
                     },
                 },
-
-                // Route for WebApp
-                new RouteConfig
-                {
-                    RouteId = "webAppServePath",
-                    ClusterId = webAppClusterId,
-                    Match = new RouteMatch
-                    {
-                        Path = "/webApp/{**catch-all}",
-                    },
-                },
         };
 
         var webClusters = new List<ClusterConfig>
@@ -71,15 +57,6 @@ public static class YarpLocalDevConfigExtensions
                     {"webAppLegacyServePath", new DestinationConfig{ Address = webAppLegacyAddress } }
                 }
             },
-
-            new()
-            {
-                ClusterId = webAppClusterId,
-                Destinations = new Dictionary<string, DestinationConfig>
-                {
-                    {"webAppServePath", new DestinationConfig{ Address =  webAppAddress} }
-                }
-            }
         };
 
         switch (config.AngularServeModeEnum)
@@ -124,7 +101,6 @@ public static class YarpLocalDevConfigExtensions
                         Path = "/{**catch-all}",
                     },
                 }
-
         };
 
     }
