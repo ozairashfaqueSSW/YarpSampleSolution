@@ -5,7 +5,7 @@ namespace WebApp.Legacy.Controllers
 {
     [Route("legacyWebapp")]
     [ApiController]
-    public class DataController : ControllerBase
+    public class ApplicationInformationController : ControllerBase
     {
         [HttpGet]
         public IActionResult Get()
