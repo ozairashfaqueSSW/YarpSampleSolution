@@ -4,22 +4,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSpaYarp(builder.Configuration);
 
-// Add services to the container.
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
-
-
-// Configure the HTTP request pipeline.
-
 app.UseHttpsRedirection();
 
-//app.UseStaticFiles();
 
 app.UseRouting();
 
-//app.UseCors();
-
+app.MapControllers();
 
 app.MapReverseProxy();
 
