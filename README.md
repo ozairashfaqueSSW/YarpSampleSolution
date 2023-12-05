@@ -1,7 +1,51 @@
-# Welcome to YarpSampleSolution
+# Welcome to Yarp Sample Solution for side-by-side by increment migration
 ## Architectural Diagram
 ![image](./src/AngularUI/src/assets/yarp-migration-architectural-diagram.png)
+## Instructions for Incremental Migration with YARP
+1. Add YARP [routes](https://github.com/ozairashfaqueSSW/YarpSampleSolution/blob/Side-by-side-incremental-migration-using-yarp/src/Yarp.Gateway/Config/YarpLocalDevConfigExtensions.cs#L36) and [clusters](https://github.com/ozairashfaqueSSW/YarpSampleSolution/blob/Side-by-side-incremental-migration-using-yarp/src/Yarp.Gateway/Config/YarpLocalDevConfigExtensions.cs#L61) for Legacy WebApp using Code-based configuration approach. Refer to the [YarpLocalDevConfigExtensions](https://github.com/ozairashfaqueSSW/YarpSampleSolution/blob/Side-by-side-incremental-migration-using-yarp/src/Yarp.Gateway/Config/YarpLocalDevConfigExtensions.cs) class for details:
+```csharp
+// Route for Legacy WebApp
+new()
+{
+    RouteId = "webAppLegacyApiServePath",
+    ClusterId = webAppLegacyApiClusterId,
+    Match = new RouteMatch
+    {
+        Path = "/api/{**catch-all}",
+    },
+},
 
+// Cluster for legacy WebApp api endpoint
+new()
+{
+    ClusterId = webAppLegacyApiClusterId,
+    Destinations = new Dictionary<string, DestinationConfig>
+                {
+                    {"webAppLegacyApiServePath", new DestinationConfig{ Address = webAppLegacyAddress } }
+                }
+},
+// See the YarpLocalDevConfigExtensions class in the repo for further details
+```
+2. Load configuration settings using in-memory configuration class: [YarpInMemoryConfiguration](https://github.com/ozairashfaqueSSW/YarpSampleSolution/blob/Side-by-side-incremental-migration-using-yarp/src/Yarp.Gateway/Config/YarpInMemoryConfiguration.cs#L6C14-L6C40) 
+```csharp
+// YarpInMemoryConfiguration is the boilerplate class, see the repo for more details.
+services
+    .AddReverseProxy()
+    .Services.AddSingleton<IProxyConfigProvider>(
+    new YarpInMemoryConfiguration(webRoutes, webClusters));
+```
+3. Add ReverseProxy middleware:
+```chsarp
+app.MapReverseProxy();
+// Checkout program.cs file for further details
+```
+4. Migrate the controller [WeatherForecastController](https://github.com/ozairashfaqueSSW/YarpSampleSolution/blob/Side-by-side-incremental-migration-using-yarp/src/Yarp.Gateway/Controllers/api/WeatherForecastController.cs)  to .NET 8 Project
+5. Add AddControllers() service and MapControllers() middleware before the ReverseProxy middleware
+```csharp
+builder.Services.AddControllers();
+app.MapControllers();
+// Checkout program.cs file for further details
+```
 ## Prerequisites
 &nbsp;
 ### 1. Clone the repo at [YarpSampleSolution](https://github.com/ozairashfaqueSSW/YarpSampleSolution). or use the following git command
