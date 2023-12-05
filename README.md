@@ -43,7 +43,7 @@ app.MapControllers();
 app.MapReverseProxy();
 // Checkout program.cs file for further details
 ```
-4. Migrate the controller WeatherForecastControllerr from Legacy 3.1 core to .NET 8 WebApp
+4. Migrate the controller i.e. "WeatherForecastController" from Legacy 3.1 core to .NET 8 WebApp
 ## Prerequisites
 &nbsp;
 ### 1. Clone the repo at [YarpSampleSolution](https://github.com/ozairashfaqueSSW/YarpSampleSolution). or use the following git command
