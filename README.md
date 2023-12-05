@@ -34,18 +34,14 @@ services
     .Services.AddSingleton<IProxyConfigProvider>(
     new YarpInMemoryConfiguration(webRoutes, webClusters));
 ```
-3. Add ReverseProxy middleware:
-```chsarp
-app.MapReverseProxy();
-// Checkout program.cs file for further details
-```
-4. Migrate the controller [WeatherForecastController](https://github.com/ozairashfaqueSSW/YarpSampleSolution/blob/Side-by-side-incremental-migration-using-yarp/src/Yarp.Gateway/Controllers/api/WeatherForecastController.cs)  to .NET 8 Project
-5. Add AddControllers() service and MapControllers() middleware before the ReverseProxy middleware
+3. Add AddControllers() service and MapControllers() middleware before the ReverseProxy middleware
 ```csharp
 builder.Services.AddControllers();
 app.MapControllers();
+app.MapReverseProxy();
 // Checkout program.cs file for further details
 ```
+4. Migrate the controller WeatherForecastControllerr from Legacy 3.1 core to .NET 8 WebApp
 ## Prerequisites
 &nbsp;
 ### 1. Clone the repo at [YarpSampleSolution](https://github.com/ozairashfaqueSSW/YarpSampleSolution). or use the following git command
