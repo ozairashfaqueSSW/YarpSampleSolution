@@ -37,6 +37,8 @@ services
 3. Add AddControllers() service and MapControllers() middleware before the ReverseProxy middleware
 ```csharp
 builder.Services.AddControllers();
+
+
 app.MapControllers();
 app.MapReverseProxy();
 // Checkout program.cs file for further details
